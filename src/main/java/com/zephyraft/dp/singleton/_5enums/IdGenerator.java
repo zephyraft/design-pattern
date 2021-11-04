@@ -1,8 +1,8 @@
-package com.zephyraft.dp.singleton;
+package com.zephyraft.dp.singleton._5enums;
 
 import java.util.concurrent.atomic.AtomicLong;
 
-public enum EnumIdGenerator {
+public enum IdGenerator {
     INSTANCE;
     private final AtomicLong id = new AtomicLong(0);
 

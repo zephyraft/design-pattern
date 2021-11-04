@@ -1,14 +1,14 @@
-package com.zephyraft.dp.singleton;
+package com.zephyraft.dp.singleton._4staticinnerclass;
 
 import java.util.concurrent.atomic.AtomicLong;
 
-public class StaticInnerClassIdGenerator {
+public class IdGenerator {
     private final AtomicLong id = new AtomicLong(0);
 
-    private StaticInnerClassIdGenerator() {
+    private IdGenerator() {
     }
 
-    public static StaticInnerClassIdGenerator getInstance() {
+    public static IdGenerator getInstance() {
         return SingletonHolder.instance;
     }
 
@@ -23,6 +23,6 @@ public class StaticInnerClassIdGenerator {
      * 所以，这种实现方法既保证了线程安全，又能做到延迟加载。
      */
     private static class SingletonHolder {
-        private static final StaticInnerClassIdGenerator instance = new StaticInnerClassIdGenerator();
+        private static final IdGenerator instance = new IdGenerator();
     }
 }

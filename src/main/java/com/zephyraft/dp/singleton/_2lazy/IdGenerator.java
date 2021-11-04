@@ -1,17 +1,17 @@
-package com.zephyraft.dp.singleton;
+package com.zephyraft.dp.singleton._2lazy;
 
 import java.util.concurrent.atomic.AtomicLong;
 
-public class LazyIdGenerator {
+public class IdGenerator {
     private final AtomicLong id = new AtomicLong(0);
-    private static LazyIdGenerator instance;
+    private static IdGenerator instance;
 
-    private LazyIdGenerator() {
+    private IdGenerator() {
     }
 
-    public static synchronized LazyIdGenerator getInstance() {
+    public static synchronized IdGenerator getInstance() {
         if (instance == null) {
-            instance = new LazyIdGenerator();
+            instance = new IdGenerator();
         }
         return instance;
     }
