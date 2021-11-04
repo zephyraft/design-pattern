@@ -74,6 +74,22 @@ public class ResourcePoolConfig {
         }
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public int getMaxTotal() {
+        return maxTotal;
+    }
+
+    public int getMaxIdle() {
+        return maxIdle;
+    }
+
+    public int getMinIdle() {
+        return minIdle;
+    }
+
     public static void main(String[] args) {
         // 这段代码会抛出IllegalArgumentException，因为minIdle>maxIdle
         ResourcePoolConfig config = new ResourcePoolConfig.Builder()
