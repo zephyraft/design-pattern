@@ -1,0 +1,5 @@
+package com.zephyraft.dp._3behavior._1observer._help;
+
+public interface RegObserver {
+    void onRegSuccess(long uid);
+}
